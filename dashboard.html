@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard – Nexus Portal</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer type="module" src="assets/main.js"></script>
+</head>
+<body class="np-bg">
+  <header class="np-header">
+    <div class="np-brand">
+      <img src="assets/logo.jpeg" alt="Nexus Portal" class="np-logo">
+      <h1 class="np-title">Nexus Portal</h1>
+    </div>
+    <nav class="np-nav">
+      <a href="index.html" class="np-link">Home</a>
+      <a href="editor.html" class="np-link">Editor</a>
+      <a id="logoutBtn" class="np-cta">Logout</a>
+    </nav>
+  </header>
+
+  <main class="np-container">
+    <div class="np-dashboard-header">
+      <h2>Your Capes</h2>
+      <a class="np-btn-primary" href="editor.html">Create New Cape</a>
+    </div>
+
+    <div id="capeGrid" class="np-grid">
+      <!-- placeholders -->
+      <div class="np-empty">No saved capes yet. Click Create New Cape to start!</div>
+    </div>
+  </main>
+
+  <footer class="np-footer">
+    <p>© Nexus Portal</p>
+  </footer>
+</body>
+</html>

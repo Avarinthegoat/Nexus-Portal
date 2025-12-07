@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Editor – Nexus Portal</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="np-bg np-editor-body">
+  <header class="np-header np-editor-header">
+    <div class="np-brand">
+      <img src="assets/logo.jpeg" class="np-logo" alt="logo">
+      <h1 class="np-title">Editor</h1>
+    </div>
+    <nav>
+      <a href="dashboard.html" class="np-btn-outline">Back</a>
+      <button id="saveRemote" class="np-btn-primary">Save</button>
+      <button id="exportPNG" class="np-btn-primary">Export PNG</button>
+    </nav>
+  </header>
+
+  <main class="np-editor-grid">
+    <section class="np-editor-left">
+      <div class="np-panel np-tools">
+        <div class="tool-row">
+          <button class="tool-btn active" data-tool="pixel">Pixel</button>
+          <button class="tool-btn" data-tool="eraser">Eraser</button>
+          <button class="tool-btn" data-tool="fill">Bucket</button>
+          <button class="tool-btn" data-tool="eyedrop">Eye</button>
+        </div>
+
+        <div class="control-row">
+          <label>Brush
+            <input id="brushSize" type="range" min="1" max="16" value="1">
+          </label>
+          <label>Zoom
+            <input id="zoomRange" type="range" min="2" max="16" value="8">
+          </label>
+          <label>Symmetry
+            <select id="symmetry">
+              <option value="none">None</option>
+              <option value="vertical">Vertical</option>
+              <option value="horizontal">Horizontal</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="palette">
+          <input id="colorPicker" type="color" value="#7C3AED">
+          <div id="quickPalette" class="quick-palette"></div>
+        </div>
+
+        <div class="layers-panel">
+          <h4>Layers</h4>
+          <div id="layersList"></div>
+          <div class="layer-actions">
+            <button id="addLayer" class="np-btn-outline">Add</button>
+            <button id="mergeLayer" class="np-btn-outline">Merge</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="np-panel np-canvas-wrap">
+        <div id="viewport" class="viewport">
+          <canvas id="editorCanvas" width="64" height="32" style="image-rendering:pixelated;"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <aside class="np-editor-right">
+      <div class="np-panel preview-panel">
+        <h4>2D Preview</h4>
+        <canvas id="preview2d" width="256" height="128" style="width:100%; image-rendering:pixelated;"></canvas>
+      </div>
+
+      <div class="np-panel preview3d-panel">
+        <h4>3D Preview</h4>
+        <div id="threeContainer" style="width:100%; height:320px; background:#07060a; border-radius:8px; overflow:hidden;"></div>
+        <p class="np-small">3D preview uses Three.js. Drag on the view to rotate the model.</p>
+      </div>
+
+      <div class="np-panel export-panel">
+        <h4>Import / Export</h4>
+        <input id="importInput" type="file" accept="image/png,image/*" />
+        <button id="clearCanvas" class="np-btn-outline">Clear</button>
+        <button id="undoBtn" class="np-btn-outline">Undo</button>
+        <button id="redoBtn" class="np-btn-outline">Redo</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- libs -->
+  <script src="https://unpkg.com/three@0.154.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.154.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- editor logic -->
+  <script type="module" src="assets/editor.js"></script>
+</body>
+</html>

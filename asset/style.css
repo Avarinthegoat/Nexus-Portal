@@ -1,0 +1,64 @@
+/* assets/styles.css - Nexus Portal black & purple neon theme */
+:root{
+  --bg:#05030a; --panel:#0e0b16; --muted:#9b8be3; --accent1:#8a2be2; --accent2:#b026ff;
+}
+
+*{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+body.np-bg{background: radial-gradient(1200px 400px at 10% 10%, rgba(138,43,226,0.06), transparent), #040205;color:#e9e7ff;margin:0;min-height:100vh;}
+.np-header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid rgba(180,110,255,0.06)}
+.np-brand{display:flex;align-items:center;gap:12px}
+.np-logo{width:48px;height:48px;object-fit:contain;border-radius:8px}
+.np-logo-lg{width:84px;height:84px;object-fit:contain;border-radius:10px}
+.np-title{font-size:18px;color:var(--muted);margin:0}
+.np-nav{display:flex;gap:12px;align-items:center}
+.np-link{color:#cfc7ff;text-decoration:none;padding:6px 10px;border-radius:8px}
+.np-cta{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:8px 12px;border-radius:10px;text-decoration:none}
+
+.np-container{max-width:1100px;margin:32px auto;padding:0 20px}
+.np-hero{background: linear-gradient(180deg, rgba(18,10,30,0.45), rgba(10,6,20,0.35)); padding:36px; border-radius:14px; text-align:center; box-shadow:0 6px 30px rgba(160,50,255,0.06)}
+.np-hero-title{font-size:28px;margin:0 0 8px;color:#fff;text-shadow:0 0 16px rgba(138,43,226,0.16)}
+.np-hero-sub{color:#cfc7ff;margin:0 0 16px}
+.np-actions{display:flex;gap:12px;justify-content:center}
+.np-btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:12px 18px;border-radius:12px;text-decoration:none}
+.np-btn-outline{border:1px solid rgba(160,80,255,0.18);padding:10px 14px;border-radius:10px;color:#d8cef7;background:transparent;text-decoration:none}
+
+.np-features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.np-card{background:var(--panel);padding:18px;border-radius:12px;border:1px solid rgba(150,0,255,0.06);color:#eae5ff}
+
+.np-footer{text-align:center;padding:18px;color:#bfb7ff}
+
+.np-center{display:flex;align-items:center;justify-content:center;height:100vh}
+.np-auth-card{background:var(--panel);padding:28px;border-radius:14px;text-align:center;max-width:420px;width:92%;border:1px solid rgba(140,60,255,0.08)}
+.np-form{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.np-input{padding:12px;border-radius:10px;background:#09060b;border:1px solid rgba(140,60,255,0.06);color:#fff}
+
+.np-small{color:#bfb7ff;font-size:13px}
+.np-link{color:var(--accent1)}
+
+.np-dashboard-header{display:flex;justify-content:space-between;align-items:center;margin-top:20px}
+.np-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:18px}
+.np-empty{color:#b4abff;padding:20px;background:linear-gradient(180deg, rgba(20,15,30,0.6), rgba(10,6,20,0.5));border-radius:10px;text-align:center}
+
+ /* Editor layout */
+.np-editor-body{min-height:100vh;display:flex;flex-direction:column}
+.np-editor-header{padding:14px 22px}
+.np-editor-grid{display:grid;grid-template-columns:1fr 340px;gap:18px;padding:20px}
+.np-editor-left{display:flex;flex-direction:column;gap:12px}
+.np-panel{background:var(--panel);padding:12px;border-radius:10px;border:1px solid rgba(140,60,255,0.06);color:#efeafe}
+.np-tools .tool-row{display:flex;gap:6px;margin-bottom:8px}
+.tool-btn{padding:8px 10px;border-radius:8px;background:transparent;color:#e9e7ff;border:1px solid rgba(160,80,255,0.08)}
+.tool-btn.active{box-shadow:0 0 18px rgba(138,43,226,0.12);border-color:rgba(180,100,255,0.22)}
+.control-row{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+.palette{display:flex;gap:8px;align-items:center;margin-top:6px}
+.quick-palette{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;width:100%}
+.quick-palette button{width:28px;height:28px;border-radius:6px;border:1px solid rgba(0,0,0,0.4)}
+.layers-panel{margin-top:12px}
+.layers-panel #layersList{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.layer-actions{margin-top:8px;display:flex;gap:8px}
+
+.np-canvas-wrap{display:flex;justify-content:center;align-items:center;padding:14px}
+.viewport{background:#05040a;padding:10px;border-radius:8px;border:1px solid rgba(160,80,255,0.06)}
+#editorCanvas{width:512px;height:256px;border-radius:4px;display:block}
+
+.preview-panel, .preview3d-panel{margin-bottom:12px}
+.export-panel input[type=file]{width:100%}
